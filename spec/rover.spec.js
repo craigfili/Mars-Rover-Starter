@@ -57,7 +57,7 @@ describe("Rover class", function() {
     expect(response.results[1].roverStatus.mode).toBe("NORMAL");
   });
 
-  it("responds correctly to the mode change command", function() {
+  it("responds with a false completed value when attempting to move in LOW_POWER mode", function() {
     let rover = new Rover(689);
     let command1 = new Command("MODE_CHANGE");
     let command2 = new Command("MOVE", 728);
@@ -71,7 +71,7 @@ describe("Rover class", function() {
     
   });
 
-  it("responds correctly to the mode change command", function() {
+  it("responds with the position for the move command", function() {
     let rover = new Rover(689);
     let command1 = new Command("MOVE", 728);
     let command2 = new Command("STATUS_CHECK");
