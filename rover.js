@@ -48,7 +48,6 @@ class Rover {
    }
    modeChange(){
       let returnObject = {};
-      console.log(this.mode);
       if (this.mode === "NORMAL"){
          this.mode = "LOW_POWER"
          returnObject["completed"] = true;
